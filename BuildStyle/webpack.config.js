@@ -29,6 +29,14 @@ module.exports = {
           "style-loader", // 创建style标签,将js中的样式资源插入到里面后,再插入到head中生效
           "css-loader", // 将css文件变成commonjs模块加载js中,里面内容是样式字符串
         ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "less-loader"
+        ]
       }
     ]
   },
